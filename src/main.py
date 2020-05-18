@@ -1,7 +1,5 @@
-import pymysql
 import mysql.connector
 from flask import jsonify
-from bson.json_util import dumps
 from flask import Flask, request
 
 import config
@@ -20,7 +18,7 @@ def users():
 	db_connection = mysql.connector.connect(
 	host="localhost",
 	user="root",
-	passwd="root",
+	passwd="password",
 	database="UID"
 	)
 	my_database = db_connection.cursor()
@@ -41,7 +39,7 @@ def add_user():
 	db_connection = mysql.connector.connect(
 	host="localhost",
 	user="root",
-	passwd="root",
+	passwd="password",
 	database="UID"
 	)
 	conn = db_connection.cursor(pymysql.cursors.DictCursor)
@@ -58,7 +56,7 @@ def validate_user():
 	db_connection = mysql.connector.connect(
 	host="localhost",
 	user="root",
-	passwd="root",
+	passwd="password",
 	database="UID"
 	)
 	conn = db_connection.cursor(pymysql.cursors.DictCursor)
