@@ -10,16 +10,5 @@ sudo pip install swagger-py-codegen &&
 #Make sure you have the necessary packages to allow the use of Docker’s repository
 sudo apt install apt-transport-https ca-certificates curl software-properties-common  -y &&
 #Add Docker’s GPG key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  &&
-#Add the stable Docker repository
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"  &&
-#Update your package index and install Docker CE
-sudo apt update &&
-curl -O https://download.docker.com/linux/ubuntu/dists/bionic/pool/edge/amd64/containerd.io_1.2.2-3_amd64.deb  &&
-sudo apt install ./containerd.io_1.2.2-3_amd64.deb  &&
-sudo apt install docker-ce  -y  &&
-sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  &&
-sudo chmod +x /usr/local/bin/docker-compose  &&
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 #now we are done with installation and we will write a welcome message
 echo "Welcome Master we are all set to begin this journey !!!"
